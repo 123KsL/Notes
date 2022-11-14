@@ -10,3 +10,12 @@ Object.defineProperty(obj, prop, {
 const person ={name:111,phone:1111111};
 Object.keys(person)  //[name,phone]
 
+Object.entries([1,2,3])//[[ "0", 1 ],[ "1", 2 ],[ "2", 3 ]] //数组转为可枚举键值对
+Object.fromEntries([[2,4]]) //键值对列表转为对象 //{2：4}
+//检查键值对是否存在 const a={name:'xxx'}
+'name' in a //true
+Reflect.has(a,'name') //true
+a.hasOwnProperty('name') //true
+app['name'] //true
+Object.hasOwn(a,'name') //true//es2022
+
